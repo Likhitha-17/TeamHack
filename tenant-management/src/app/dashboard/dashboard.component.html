@@ -1,1 +1,30 @@
-<p>dashboard works!</p>
+<div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">DashBoard</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a routerLink="home">Audit Property</a></li>
+                <li><a href="#">Register Property</a></li>
+                <li><a href="#">Register Tenant</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="authService!==null">
+                    <a class="text-white">{{authService.authName}}</a>
+                </li>
+                <li>
+                    <a (click)="authService.logout()">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <button (click)="authService.authUser">
+            INFO
+        </button>
+    </div>
+</div>
