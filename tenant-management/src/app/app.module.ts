@@ -15,9 +15,11 @@ import { HomeComponent } from "./home/home.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddpropertyComponent } from './addproperty/addproperty.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DashboardComponent, NavbarComponent],
+  declarations: [AppComponent, HomeComponent, DashboardComponent, NavbarComponent, AddpropertyComponent],
   imports: [
     AngularFireDatabaseModule,
     AngularFirestoreModule,
@@ -26,6 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     BrowserModule,
     FormsModule,
+    MatTableModule,
     BrowserAnimationsModule,
   ],
   providers: [],
