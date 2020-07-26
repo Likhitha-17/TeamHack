@@ -1,0 +1,605 @@
+<head>
+<title>
+    Properties
+</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .img-hover-zoom {
+  /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+         .column {
+          float: center;
+          width: 33%;
+          /* padding: 0 10px; */
+        }
+       
+        
+        /* Remove extra left and right margins, due to padding */
+        .row {margin: 0 -5px;}
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive columns */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+            
+          }
+        }
+        
+        /* Style the counter cards */
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          text-align: center;
+          background-color: #f1f1f1;
+          height: 10cm;
+          width: 9cm;
+          
+          
+        }
+       
+        .dropdown-menu a:hover {background-color: #FFF;}
+
+        .dropdown:hover .dropdown-menu {display: block;}
+        .mySlides {display:none;}
+        .text-block {
+  position: absolute;
+  bottom: 2cm;
+  right: 5px;
+  font-size: 0.5cm;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}  
+    
+        .vl {
+  border-left: 3px solid green;
+  height: 90px;
+  margin-left:0cm;
+}
+.columna {
+  float: left;
+  width: 25%;
+  height:2cm;
+}
+.columnb {
+  float: right;
+  width: 75%;
+  height: 2cm;
+}
+.glow {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  /* background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFGhLSeBSHZLdGUnLz4ZnCN0bRmNVVukQqeg&usqp=CAU');
+  resize: cover; */
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4 ;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 60px #ff69b4, 0 0 70px #ff69b4, 0 0 80px #ff69b4;
+  }
+}
+      
+        </style>
+        
+   <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"> -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+	<!-- pop up box -->
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+</head>
+<body>
+
+ <div style="background-image: url('https://image.freepik.com/free-photo/wood-table-top-nature-green-blurred-background-montage-your-products_7182-21.jpg');" >
+    <br>
+    <br> 
+    <br>  
+    <br>
+    <h1 style="margin-left: 1cm;margin-right: 1cm; font-family: 'Tangerine',serif;color:rgb(207, 82, 24); font-weight: 550;  text-align: center; ">Properties Under Tenant Management</h1>
+    <br>
+    <br>
+    <div class="container" style="align-content: center;">
+      <!-- row start -->
+       <div class="row">
+              <!-- card-start -->
+              <div class="column">
+                <div class="card">
+                  <div id="demo" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="img-hover-zoom">
+                              <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-hover-zoom">
+                              <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="img-hover-zoom">
+                              <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                            </div>
+                        </div>
+                      </div> 
+                    </div>  
+                    <div >
+                      <div style=" display: table;
+                      clear: both;margin-bottom: 0.3cm;">
+                          <div class="columna" style="background-color:#fff;">
+                            <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                            </div>
+                            <div class="columnb" style="background-color:#FFF">
+                              <br>
+                              <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                  <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                  <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+
+                              </div>
+                            </div>
+                      </div>
+                      <br>
+                      
+                      <div class="dropdown-divider"></div>
+                      <div style="margin-bottom: 0.4cm;">
+                        <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                        <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                    </div>
+                  </div>
+                </div>
+              </div>
+                 <!-- card-end -->
+                   <!-- card-start -->
+                   <div class="column">
+                    <div class="card">
+                      <div id="demo" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                          </div> 
+                        </div>  
+                        <div >
+                          <div style=" display: table;
+                          clear: both;margin-bottom: 0.3cm;">
+                              <div class="columna" style="background-color:#fff;">
+                                <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                                </div>
+                                <div class="columnb" style="background-color:#FFF">
+                                  <br>
+                                  <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                      <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                      <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+    
+                                  </div>
+                                </div>
+                          </div>
+                          <br>
+                          
+                          <div class="dropdown-divider"></div>
+                          <div style="margin-bottom: 0.4cm;">
+                            <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                            <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- card-end -->
+                   <!-- card-start -->
+                   <div class="column">
+                    <div class="card">
+                      <div id="demo" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="img-hover-zoom">
+                                  <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                                </div>
+                            </div>
+                          </div> 
+                        </div>  
+                        <div >
+                          <div style=" display: table;
+                          clear: both;margin-bottom: 0.3cm;">
+                              <div class="columna" style="background-color:#fff;">
+                                <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                                </div>
+                                <div class="columnb" style="background-color:#FFF">
+                                  <br>
+                                  <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                      <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                      <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+    
+                                  </div>
+                                </div>
+                          </div>
+                          <br>
+                          
+                          <div class="dropdown-divider"></div>
+                          <div style="margin-bottom: 0.4cm;">
+                            <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                            <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                     <!-- card-end -->
+       </div>
+       <br>
+       <!-- row-end -->
+             <!-- row start -->
+       <div class="row">
+        <!-- card-start -->
+        <div class="column">
+          <div class="card">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <div class="img-hover-zoom">
+                        <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="img-hover-zoom">
+                        <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <div class="img-hover-zoom">
+                        <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                      </div>
+                  </div>
+                </div> 
+              </div>  
+              <div >
+                <div style=" display: table;
+                clear: both;margin-bottom: 0.3cm;">
+                    <div class="columna" style="background-color:#fff;">
+                      <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                      </div>
+                      <div class="columnb" style="background-color:#FFF">
+                        <br>
+                        <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                            <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                            <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+
+                        </div>
+                      </div>
+                </div>
+                <br>
+                
+                <div class="dropdown-divider"></div>
+                <div style="margin-bottom: 0.4cm;">
+                  <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                  <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+           <!-- card-end -->
+             <!-- card-start -->
+             <div class="column">
+              <div class="card">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="img-hover-zoom">
+                            <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                    </div> 
+                  </div>  
+                  <div >
+                    <div style=" display: table;
+                    clear: both;margin-bottom: 0.3cm;">
+                        <div class="columna" style="background-color:#fff;">
+                          <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                          </div>
+                          <div class="columnb" style="background-color:#FFF">
+                            <br>
+                            <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+
+                            </div>
+                          </div>
+                    </div>
+                    <br>
+                    
+                    <div class="dropdown-divider"></div>
+                    <div style="margin-bottom: 0.4cm;">
+                      <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                      <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+               <!-- card-end -->
+             <!-- card-start -->
+             <div class="column">
+              <div class="card">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="img-hover-zoom">
+                            <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                    </div> 
+                  </div>  
+                  <div >
+                    <div style=" display: table;
+                    clear: both;margin-bottom: 0.3cm;">
+                        <div class="columna" style="background-color:#fff;">
+                          <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                          </div>
+                          <div class="columnb" style="background-color:#FFF">
+                            <br>
+                            <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+
+                            </div>
+                          </div>
+                    </div>
+                    <br>
+                    
+                    <div class="dropdown-divider"></div>
+                    <div style="margin-bottom: 0.4cm;">
+                      <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                      <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+               <!-- card-end -->
+ </div>
+ <br>
+ <!-- row-end -->   
+          <!-- row start -->
+          <div class="row">
+            <!-- card-start -->
+            <div class="column">
+              <div class="card">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <div class="img-hover-zoom">
+                            <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="img-hover-zoom">
+                            <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                          </div>
+                      </div>
+                    </div> 
+                  </div>  
+                  <div >
+                    <div style=" display: table;
+                    clear: both;margin-bottom: 0.3cm;">
+                        <div class="columna" style="background-color:#fff;">
+                          <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                          </div>
+                          <div class="columnb" style="background-color:#FFF">
+                            <br>
+                            <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+
+                            </div>
+                          </div>
+                    </div>
+                    <br>
+                    
+                    <div class="dropdown-divider"></div>
+                    <div style="margin-bottom: 0.4cm;">
+                      <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                      <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+               <!-- card-end -->
+                 <!-- card-start -->
+                 <div class="column">
+                  <div class="card">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="img-hover-zoom">
+                                <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="img-hover-zoom">
+                                <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="img-hover-zoom">
+                                <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                        </div> 
+                      </div>  
+                      <div >
+                        <div style=" display: table;
+                        clear: both;margin-bottom: 0.3cm;">
+                            <div class="columna" style="background-color:#fff;">
+                              <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                              </div>
+                              <div class="columnb" style="background-color:#FFF">
+                                <br>
+                                <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                    <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                    <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+  
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                        
+                        <div class="dropdown-divider"></div>
+                        <div style="margin-bottom: 0.4cm;">
+                          <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                          <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                   <!-- card-end -->
+                 <!-- card-start -->
+                 <div class="column">
+                  <div class="card">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <div class="img-hover-zoom">
+                                <img src="images/g1.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="img-hover-zoom">
+                                <img src="images/g2.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="img-hover-zoom">
+                                <img src="images/g3.jpg" alt="Alps" style="width:9cm;height: 5.75cm;">
+                              </div>
+                          </div>
+                        </div> 
+                      </div>  
+                      <div >
+                        <div style=" display: table;
+                        clear: both;margin-bottom: 0.3cm;">
+                            <div class="columna" style="background-color:#fff;">
+                              <button style="width: 1.8cm; color: #FFF; background-color: #9a9c24;border-width: 0ch;margin-top: 0.75cm;margin-left: 0.3cm; margin-bottom: 3mm;"><a style="font-size: 0.5cm">19</a><br>FEB,<br>2020</button>
+                              </div>
+                              <div class="columnb" style="background-color:#FFF">
+                                <br>
+                                <div class="vl" style="align-content: flex-start;margin-right: 0.9cm;margin-left: 0.8cm;">
+                                    <h5 style="color:crimson;"> 2 BHK Flat</h5>
+                                    <h5 >13-433/4/1, Vidyanagar Colony , JNTUH </h5>
+  
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                        
+                        <div class="dropdown-divider"></div>
+                        <div style="margin-bottom: 0.4cm;">
+                          <a style="color: #3c20d8;"> <i class="fa fa-map-marker" style="font-size:24px"></i>&nbsp;&nbsp;HYDERABAD</a>
+                          <a class="aa"  style=" margin-left: 2cm;" href="#"><i class="fa fa-address-book" style="font-size:18px">  &nbsp;9876543210</i></a> &nbsp;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                   <!-- card-end -->
+     </div>
+     <br>
+     <!-- row-end -->
+    </div>
+      
+    
+  </div>
+
+  </body>
