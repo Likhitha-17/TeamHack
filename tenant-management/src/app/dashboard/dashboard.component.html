@@ -1,75 +1,112 @@
 <div>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">DashBoard</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a routerLink="home">Audit Property</a></li>
-                <li><a href="#">Register Property</a></li>
-                <li><a href="#">Register Tenant</a></li>
-            </ul>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">DashBoard</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="home">Audit Property</a></li>
+        <li><a href="#">Register Property</a></li>
+        <li><a href="#">Register Tenant</a></li>
+      </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li *ngIf="authService!==null">
-                    <a class="text-white">{{authService.authName}}</a>
-                </li>
-                <li>
-                    <a (click)="authService.logout()">
-                        <i class="fa fa-google" aria-hidden="true"></i>
-                        Logout</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div>
-        <button (click)="authService.authUser">
-            INFO
-        </button>
-        <br><br>
-        <button ><a style="text-decoration: none;" routerLink="/addproperty">ADD Property</a></button>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="authService!==null">
+          <a class="text-white">{{authService.authName}}</a>
+        </li>
+        <li>
+          <a (click)="authService.logout()">
+            <i class="fa fa-google" aria-hidden="true"></i>
+            Logout</a>
+        </li>
+      </ul>
     </div>
-    <br>
+  </nav>
+  <div>
+    <button (click)="authService.authUser">
+      INFO
+    </button>
+    <br><br>
+    <button><a style="text-decoration: none;" routerLink="/addproperty">ADD Property</a></button>
+  </div>
+  <br>
+  <br>
 
-    
-        <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+  <!-- *ngFor="let p of products$ | async; let i = index" -->
 
-            <!--- Note that these columns can be defined in any order.
-                  The actual rendered columns are set as a property on the row definition" -->
-          
-            <!-- Position Column -->
-            <ng-container matColumnDef="property_name">
-              <th mat-header-cell *matHeaderCellDef> Property Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.property_name}} </td>
-            </ng-container>
-          
-            <!-- Name Column -->
-            <ng-container matColumnDef="rent">
-              <th mat-header-cell *matHeaderCellDef> Rent </th>
-              <td mat-cell *matCellDef="let element"> {{element.rent}} </td>
-            </ng-container>
-          
-            <!-- Weight Column -->
-            <ng-container matColumnDef="location">
-              <th mat-header-cell *matHeaderCellDef> Location </th>
-              <td mat-cell *matCellDef="let element"> {{element.location}} </td>
-            </ng-container>
-          
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="lease_time">
-              <th mat-header-cell *matHeaderCellDef> Lease Time </th>
-              <td mat-cell *matCellDef="let element"> {{element.lease_time}} </td>
-            </ng-container>
 
-            <ng-container matColumnDef="tenant">
-                <th mat-header-cell *matHeaderCellDef> Tenant  </th>
-                <td mat-cell *matCellDef="let element"> {{element.tenant}} </td>
-              </ng-container>
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <!-- <tr *ngFor="let p of (products$ | async)">
+    <td>{{ p.payload.val().title }}</td>
+    <td>{{ p.payload.val().price }}</td>
+    <td>
+      <a [routerLink]="['/admin/products/', p.key]">Edit</a>
+    </td>
+  </tr>
+</tbody>
+</table> -->
+  <br>
 
-            <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
-          </table>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Property Name</th>
+        <th>Rent</th>
+        <th>Location</th>
+        <th>Lease Time</th>
+        <th>Owner Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let p of details">
+        <td>{{p.payload.val()["propertyName"]}}</td>
+        <td>{{p.payload.val()["rent"]}}</td>
+        <td>{{p.payload.val()["location"]}}</td>
+        <td>{{p.payload.val()["leasetime"]}}</td>
+        <td>{{p.payload.val()["owner_email"]}}</td>
+        <td>
+          <span><button class="btn btn-success" (click)="editTenant()">Edit</button></span>
+          <span><button class="btn btn-danger" (click)="removeTenant()">Remove</button></span></td>
+      </tr>
+    </tbody>
+
+
+
+  </table>
 </div>
+
+
+
+<!-- <ng-container matColumnDef="propertyName">
+  <th mat-header-cell *matHeaderCellDef> Property Name </th>
+  <td mat-cell *matCellDef="let element"> {{p.payload.val()["propertyName"]}}</td>
+</ng-container> -->
+
+
+<!-- <ng-container matColumnDef="rent">
+  <th mat-header-cell *matHeaderCellDef> Rent </th>
+  <td mat-cell *matCellDef="let element"> {{element.rent}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="location">
+  <th mat-header-cell *matHeaderCellDef> Location </th>
+  <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+</ng-container>
+
+
+<ng-container matColumnDef="lease_time">
+  <th mat-header-cell *matHeaderCellDef> Lease Time </th>
+  <td mat-cell *matCellDef="let element"> {{element.lease_time}} </td>
+</ng-container>
+
+<ng-container matColumnDef="tenant">
+  <th mat-header-cell *matHeaderCellDef> Tenant </th>
+  <td mat-cell *matCellDef="let element"> {{element.tenant}} </td>
+</ng-container>
+
+
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->

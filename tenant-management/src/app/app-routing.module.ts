@@ -21,5 +21,4 @@ export class AppRoutingModule {}
 // git status---for checking
 // git add .
 // git commit -m "commit msg"
-// git push origin master
 // git push --set-upstream origin branchname

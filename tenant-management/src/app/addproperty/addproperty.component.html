@@ -1,4 +1,6 @@
-<form >
+
+
+<form (ngSubmit)="createProperty(f)" #f="ngForm">
     <div class="container">
         <div class="jumbotron">
             <h2>Register Property</h2>
@@ -8,20 +10,20 @@
             <hr>
 
             <label for="pname"><b>Property Name</b></label>
-            <input type="text" placeholder="Property Name" name="pname" id="pname" required >
+            <input type="text" placeholder="Property Name" name="pname" id="pname" required ngModel>
 
             <label for="location"><b>Property Location</b></label>
-            <input type="text" placeholder="Location" name="location" id="location" required >
+            <input type="text" placeholder="Location" name="location" id="location" required ngModel>
 
             <label for="rent"><b>Property Rent</b></label>
-            <input type="text" placeholder="Rent" name="rent" id="rent" required >
+            <input type="text" placeholder="Rent" name="rent" id="rent" required ngModel>
             <br>
 
             <label for="leasetime"><b>Property Lease Time</b></label>
-            <input type="text" placeholder="Leasetime (In Months)" name="leasetime" id="leasetime" required >
+            <input type="text" placeholder="Leasetime (In Months)" name="leasetime" id="leasetime" required ngModel>
 
 
-            <button type="submit" class="registerbtn" ><a style="text-decoration: none; color: white;" routerLink="/dashboard">Register</a></button>
+            <button type="submit" class="registerbtn" >Register</button>
 
         </div>
     </div>
