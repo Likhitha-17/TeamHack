@@ -21,6 +21,7 @@ export class AuthService {
     });
   }
 
+
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider());
@@ -46,7 +47,7 @@ export class AuthService {
 
   get authUser(): User {
     const user = JSON.parse(localStorage.getItem("user"));
-    console.log(user);
+    // console.log(user);
     return user;
   }
   get authName(): string {
